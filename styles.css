@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.stopwatch {
+    text-align: center;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 20px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    margin-bottom: 20px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateY(-3px); /* For a more natural look */
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+    height: 8px;
+    background: black;
+}
+
+.minute-hand {
+    height: 6px;
+    background: black;
+}
+
+.second-hand {
+    height: 2px;
+    background: red;
+}
+
+#display {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#laps li {
+    padding: 5px 0;
+    border-bottom: 1px solid #000000;
+}
